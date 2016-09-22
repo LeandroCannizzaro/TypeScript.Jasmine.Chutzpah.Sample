@@ -1,0 +1,22 @@
+﻿{
+  "Framework": "jasmine",
+  "TestHarnessReferenceMode": "Normal",
+  "TypeScriptModuleKind": "CommonJS",
+
+  "Compile": {
+    "Extensions": [ ".ts" ],
+    "ExtensionsWithNoOutput": [ ".d.ts" ],
+    "Executable": "%msbuildexe%",
+    "Arguments": "/t:CompileTS "
+  },
+  "References": [
+    {
+      "Includes": [ "**/lib/**.js", "**/spec/**.ts", "**/src/**.ts" ]
+    }
+  ],
+  "Tests": [
+    {
+      "Includes": [ "**/spec/**.ts" ]
+    }
+  ]
+}
